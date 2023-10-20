@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231020 19:58:30.788" rpa="false" schemaversion="4">
+<suite id="s1" name="Preenchimento Correto" source="c:\Users\Pichau\Desktop\Projeto Pom\testes\preenchimento_correto.robot">
+<test id="s1-t1" name="Verificar se ao preencher corretamente o formulário os dados são inseridos corretamente na lista e se um novo card é criado no time escolhido" line="7">
+<kw name="Dado que eu acesse o Organo" library="setup_teardown" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=http://localhost:3000/</arg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231020 19:58:32.866" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/'.</msg>
+<status status="PASS" starttime="20231020 19:58:32.865" endtime="20231020 19:58:44.386"/>
+</kw>
+<status status="PASS" starttime="20231020 19:58:32.865" endtime="20231020 19:58:44.386"/>
+</kw>
+<kw name="Dado que eu preencha os campos do formulário" library="cadastro_organo">
+<kw name="FakerLibrary.First Name">
+<var>${Nome}</var>
+<msg timestamp="20231020 19:58:44.393" level="FAIL">No keyword with name 'FakerLibrary.First Name' found.</msg>
+<status status="FAIL" starttime="20231020 19:58:44.393" endtime="20231020 19:58:44.525"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CAMPO_NOME}</arg>
+<arg>${Nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231020 19:58:44.525" endtime="20231020 19:58:44.525"/>
+</kw>
+<kw name="FakerLibrary.Job">
+<var>${Cargo}</var>
+<status status="NOT RUN" starttime="20231020 19:58:44.529" endtime="20231020 19:58:44.530"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CAMPO_CARGO}</arg>
+<arg>${Cargo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231020 19:58:44.533" endtime="20231020 19:58:44.534"/>
+</kw>
+<kw name="FakerLibrary.Image Url">
+<var>${Imagem}</var>
+<arg>width=200</arg>
+<arg>height=100</arg>
+<status status="NOT RUN" starttime="20231020 19:58:44.537" endtime="20231020 19:58:44.537"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CAMPO_IMAGEM}</arg>
+<arg>${Imagem}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231020 19:58:44.537" endtime="20231020 19:58:44.537"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CAMPO_TIME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231020 19:58:44.537" endtime="20231020 19:58:44.537"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selecionar_time}[0]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231020 19:58:44.537" endtime="20231020 19:58:44.537"/>
+</kw>
+<status status="FAIL" starttime="20231020 19:58:44.389" endtime="20231020 19:58:44.538"/>
+</kw>
+<kw name="E clique no botão &quot;Criar Card&quot;" library="cadastro_organo">
+<status status="NOT RUN" starttime="20231020 19:58:44.538" endtime="20231020 19:58:44.538"/>
+</kw>
+<kw name="Então identificar o card no time esperado" library="cadastro_organo">
+<status status="NOT RUN" starttime="20231020 19:58:44.540" endtime="20231020 19:58:44.540"/>
+</kw>
+<kw name="Fechar o navegador" library="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231020 19:58:44.542" endtime="20231020 19:58:47.040"/>
+</kw>
+<status status="PASS" starttime="20231020 19:58:44.541" endtime="20231020 19:58:47.040"/>
+</kw>
+<status status="FAIL" starttime="20231020 19:58:32.863" endtime="20231020 19:58:47.041">No keyword with name 'FakerLibrary.First Name' found.</status>
+</test>
+<status status="FAIL" starttime="20231020 19:58:30.832" endtime="20231020 19:58:47.043"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Preenchimento Correto">Preenchimento Correto</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231020 19:58:32.799" level="ERROR">Error in file 'c:\Users\Pichau\Desktop\Projeto Pom\resources\main.robot' on line 3: Importing library 'FakerLibrary' failed: ModuleNotFoundError: No module named 'FakerLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  c:\Users\Pichau\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src\robotframework_debug_adapter
+  C:\Users\Pichau\Desktop\Projeto Pom
+  c:\Users\Pichau\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src
+  c:\Users\Pichau\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src\robotframework_ls\vendored
+  C:\Users\Pichau\AppData\Local\Programs\Python\Python312\python312.zip
+  C:\Users\Pichau\AppData\Local\Programs\Python\Python312\DLLs
+  C:\Users\Pichau\AppData\Local\Programs\Python\Python312\Lib
+  C:\Users\Pichau\AppData\Local\Programs\Python\Python312
+  C:\Users\Pichau\AppData\Local\Programs\Python\Python312\Lib\site-packages</msg>
+</errors>
+</robot>
